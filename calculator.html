@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+		#display
+		{
+			height: 50px;
+			width: 30%;
+			margin-left: 400px;
+			background-color: #edf2e3;
+			color: #0d15e2;
+			text-align: center;
+			text
+		}
+
+		.numto
+		{
+			height: 30px;
+			width: 14.5%
+		}
+		
+		.num
+		{
+			margin-left:400px;
+		}
+		.hell
+		{
+			height: 40px;
+			width: 89px;
+		}
+
+		.operator
+		{
+			margin-left: 400px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+			<input type="text" id="display" name="dispaly" disabled><br><br>
+		<div class="num">
+			Number: <input type="text" class="numto" id="num1" name="textnum1">
+			Number: <input type="text" class="numto" id="num2" name="textnum1"><br><br>
+		</div>
+			<div class="operator">
+			<input type="button" class="hell" onclick="sum()" value="+">
+			<input type="button" class="hell" onclick="sub()" value="-">
+			<input type="button" class="hell" onclick="multi()" value="X">
+			<input type="button" class="hell" onclick="divide()" value="/">
+			<input type="reset" class="hell" onclick="clear()" value="C">
+		</div>
+	</form>
+
+	
+	<script>
+		function sum()
+		{
+			var num1 = Number(document.getElementById('num1').value);
+			var num2 = Number(document.getElementById('num2').value);
+			var result= num1 + num2;
+			document.getElementById('display').value=result;
+		}
+		function sub()
+		{
+			var num1 = Number(document.getElementById('num1').value);
+			var num2 = Number(document.getElementById('num2').value);
+			var result= num1 - num2;
+			document.getElementById('display').value=result;
+		}
+		function multi()
+		{
+			var num1 = Number(document.getElementById('num1').value);
+			var num2 = Number(document.getElementById('num2').value);
+			var result= num1 * num2;
+			document.getElementById('display').value=result;
+		}
+		function divide()
+		{
+			var num1 = Number(document.getElementById('num1').value);
+			var num2 = Number(document.getElementById('num2').value);
+			var result= num1 / num2;
+			document.getElementById('display').value=result;
+		}
+	</script>
+
+
+</body>
+</html>
